@@ -1,5 +1,5 @@
-﻿Tutaj wrzucamy pliki Manipulatora
- 
+Projekt inteligentnego podlewania z użyciem uczenia maszynowego
+
 ### Branch naming conventions:
 - stable: tested and working version
 - master: under development
