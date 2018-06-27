@@ -65,10 +65,11 @@
   <avrgcc.compiler.directories.IncludePaths>
     <ListValues>
       <Value>../../../IntelligentGardenWateringSystem</Value>
-      <Value>C:/Users/Janek/Documents/Arduino/libraries/DHT-sensor-library</Value>
       <Value>C:/Users/Janek/Documents/Arduino/libraries/LiquidCrystal_I2C</Value>
-      <Value>C:/Users/Janek/Documents/Arduino/libraries/rc-switch</Value>
+      <Value>C:/Users/Janek/Documents/Arduino/libraries/DHT-sensor-library</Value>
       <Value>C:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries/Wire/src</Value>
+      <Value>C:/Users/Janek/Documents/Arduino/libraries/rc-switch</Value>
+      <Value>C:/Users/Janek/Documents/Arduino/libraries/Adafruit_Sensor</Value>
       <Value>C:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries/Wire/src/utility</Value>
       <Value>C:/Program Files (x86)/Arduino/libraries</Value>
       <Value>C:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries</Value>
@@ -104,10 +105,11 @@
   <avrgcccpp.compiler.directories.IncludePaths>
     <ListValues>
       <Value>../../../IntelligentGardenWateringSystem</Value>
-      <Value>C:/Users/Janek/Documents/Arduino/libraries/DHT-sensor-library</Value>
       <Value>C:/Users/Janek/Documents/Arduino/libraries/LiquidCrystal_I2C</Value>
-      <Value>C:/Users/Janek/Documents/Arduino/libraries/rc-switch</Value>
+      <Value>C:/Users/Janek/Documents/Arduino/libraries/DHT-sensor-library</Value>
       <Value>C:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries/Wire/src</Value>
+      <Value>C:/Users/Janek/Documents/Arduino/libraries/rc-switch</Value>
+      <Value>C:/Users/Janek/Documents/Arduino/libraries/Adafruit_Sensor</Value>
       <Value>C:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries/Wire/src/utility</Value>
       <Value>C:/Program Files (x86)/Arduino/libraries</Value>
       <Value>C:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries</Value>
@@ -443,10 +445,11 @@ build.arch=AVR
   <avrgcc.compiler.directories.IncludePaths>
     <ListValues>
       <Value>../../../IntelligentGardenWateringSystem</Value>
-      <Value>C:/Users/Janek/Documents/Arduino/libraries/DHT-sensor-library</Value>
       <Value>C:/Users/Janek/Documents/Arduino/libraries/LiquidCrystal_I2C</Value>
-      <Value>C:/Users/Janek/Documents/Arduino/libraries/rc-switch</Value>
+      <Value>C:/Users/Janek/Documents/Arduino/libraries/DHT-sensor-library</Value>
       <Value>C:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries/Wire/src</Value>
+      <Value>C:/Users/Janek/Documents/Arduino/libraries/rc-switch</Value>
+      <Value>C:/Users/Janek/Documents/Arduino/libraries/Adafruit_Sensor</Value>
       <Value>C:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries/Wire/src/utility</Value>
       <Value>C:/Program Files (x86)/Arduino/libraries</Value>
       <Value>C:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries</Value>
@@ -482,10 +485,11 @@ build.arch=AVR
   <avrgcccpp.compiler.directories.IncludePaths>
     <ListValues>
       <Value>../../../IntelligentGardenWateringSystem</Value>
-      <Value>C:/Users/Janek/Documents/Arduino/libraries/DHT-sensor-library</Value>
       <Value>C:/Users/Janek/Documents/Arduino/libraries/LiquidCrystal_I2C</Value>
-      <Value>C:/Users/Janek/Documents/Arduino/libraries/rc-switch</Value>
+      <Value>C:/Users/Janek/Documents/Arduino/libraries/DHT-sensor-library</Value>
       <Value>C:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries/Wire/src</Value>
+      <Value>C:/Users/Janek/Documents/Arduino/libraries/rc-switch</Value>
+      <Value>C:/Users/Janek/Documents/Arduino/libraries/Adafruit_Sensor</Value>
       <Value>C:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries/Wire/src/utility</Value>
       <Value>C:/Program Files (x86)/Arduino/libraries</Value>
       <Value>C:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries</Value>

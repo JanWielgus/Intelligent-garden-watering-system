@@ -18,12 +18,14 @@
 #define BTN2 10420130 // B
 #define BTN3 10420132 // C
 #define BTN4 10420136 // D
+#define NO_BUTTON 0 // Wartosc jesli nie kliknieto zadnego przycisku
 
 #define MIN_TIME_BTWN_BTN 350 // Minimalny czas pomiedzy kliknieciami (zeby uniknac powturzonego odebrania)
 
 
-String tempText = "Temp: ";
-String humidText = "Humid: ";
+const String tempText = "Temp: ";
+const String humidText = "Humid: ";
+const String Space = " ";
 
 
 
