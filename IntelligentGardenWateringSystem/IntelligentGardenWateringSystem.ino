@@ -42,6 +42,7 @@ uint16_t tYear;
 // Global variables
 int menuPage = 0; // obecna strona w menu. Opisane na dole pliku
 bool wereAChangeFlag = true; // Jesli byla zmiana ktora musi zaistniec w menu to true (trzba ponownie zaladowac menu)
+uint32_t lastMenuChangeTime = 0; // Czas ostatniej zmiany w menu
 
 
 void setup()
@@ -83,9 +84,15 @@ void runMenu()
 	static uint32_t rBtn; // Wcisniety klawisz
 	rBtn = getPressedBtn();
 	
-	if (bool(rBtn) || wereAChangeFlag) // Jesli kliknieto jakis klawisz lub byla inna zmiana
+	// Ladowanie menu
+	if (bool(rBtn)) // Jesli kliknieto jakis klawisz
 	{
-		// Ladowanie menu
+		
+		
+		
+	}
+	else if (wereAChangeFlag) // Jesli wystapila inna zmiana
+	{
 		
 		
 		wereAChangeFlag = false; // resetuj flage zadania aktualizacji wyswietlacza
@@ -155,7 +162,33 @@ void runTimeModule()
 /*
 	lcd.setCursor(col, row) 
 	
-	Strony w menu (bold to wybrana opcja)
-		0 - stan czuwania: 0: "(trwa ocena dnia / dzien suchy / dzien mokry / wymuszono podlew / wymuszono brak)"  1: "A-start B-menu"
-		1 - strona glowna: 0: "TRYBY ust stan"  1: "info"
+	Strony w menu (bold to wybrana opcja):
+	
+		0 - stan czuwania: (wlacza sie po jakims czasie bezczynnosci)
+			0: "A-AUTO B-podlew" 1: "C-off  D-menu"       ||lub||       0: "(tryb auto / dzien suchy / dzien mokry / wymuszono podlew / wymuszono brak)"  1: "D-menu"
+			
+		1 - strona glowna: (B - natychmiastowy stan czuwania)
+			0: "STAN ustaw tryby"  1: "info"
+			
+		2 - stan: (B - powrot do menu)
+			0: "XX:XX XX.XX.XXXX"  1: "T:XX H:XX R:XX"  -  data i godzina, temp, humid, rain
+			
+		3 - ustawienia: (B - powrot do menu)
+			- 0: "Ust auto podlew"
+			  1: obecna opcja
+			  1:  (wybrane): "ON | off"
+			
+			- 0: "Godzina podlew"
+			  1: obecna opcja
+			  1: (wybrane):  "|23| 24 3 4"
+			  
+			- 0: "Czas podlewania"
+			  1: obecna opcja
+			  1: (wybrane): "5 10 |15| 20 25"
+			  
+		4 - tryby ?
+		
+		5 - info (informacje o sterownaiu)
+			- 0: "A-ENTER B-CANCEL"
+			  1: "C-LEWO  D-PRAWO"
 */
