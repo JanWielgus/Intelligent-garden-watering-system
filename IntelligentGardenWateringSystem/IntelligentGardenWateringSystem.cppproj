@@ -69,6 +69,8 @@
       <Value>C:/Users/Janek/Documents/Arduino/libraries/DHT-sensor-library</Value>
       <Value>C:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries/Wire/src</Value>
       <Value>C:/Users/Janek/Documents/Arduino/libraries/rc-switch</Value>
+      <Value>C:/Users/Janek/Documents/Arduino/libraries/Time</Value>
+      <Value>C:/Users/Janek/Documents/Arduino/libraries/DS1307RTC</Value>
       <Value>C:/Users/Janek/Documents/Arduino/libraries/Adafruit_Sensor</Value>
       <Value>C:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries/Wire/src/utility</Value>
       <Value>C:/Program Files (x86)/Arduino/libraries</Value>
@@ -109,6 +111,8 @@
       <Value>C:/Users/Janek/Documents/Arduino/libraries/DHT-sensor-library</Value>
       <Value>C:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries/Wire/src</Value>
       <Value>C:/Users/Janek/Documents/Arduino/libraries/rc-switch</Value>
+      <Value>C:/Users/Janek/Documents/Arduino/libraries/Time</Value>
+      <Value>C:/Users/Janek/Documents/Arduino/libraries/DS1307RTC</Value>
       <Value>C:/Users/Janek/Documents/Arduino/libraries/Adafruit_Sensor</Value>
       <Value>C:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries/Wire/src/utility</Value>
       <Value>C:/Program Files (x86)/Arduino/libraries</Value>
@@ -131,7 +135,7 @@
   <avrgcccpp.assembler.debugging.DebugLevel>Default (-Wa,-g)</avrgcccpp.assembler.debugging.DebugLevel>
 </AvrGccCpp>
     </ToolchainSettings>
-    <VMSETTING_IncludePaths>../../../IntelligentGardenWateringSystem;C:/Program Files (x86)/Arduino/libraries;C:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries;C:/Users/Janek/Documents/Arduino/libraries;C:/Program Files (x86)/Arduino/hardware/arduino/avr/cores/arduino;C:/Program Files (x86)/Arduino/hardware/arduino/avr/variants/mega;C:/Program Files (x86)/Arduino/hardware/tools/avr/avr/include/;C:/Program Files (x86)/Arduino/hardware/tools/avr/avr/include/avr/;C:/Program Files (x86)/Arduino/hardware/tools/avr/lib/gcc/avr/4.8.1/include;C:/Program Files (x86)/Arduino/hardware/tools/avr/lib/gcc/avr/4.9.2/include;C:/Program Files (x86)/Arduino/hardware/tools/avr/lib/gcc/avr/4.9.3/include;C:/Users/Janek/Documents/Arduino/libraries/DHT-sensor-library;C:/Users/Janek/Documents/Arduino/libraries/LiquidCrystal_I2C;C:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries/Wire/src;C:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries/Wire/src/utility;C:/Users/Janek/Documents/Arduino/libraries/Adafruit_Sensor;C:/Program Files (x86)/Arduino/hardware/arduino/avr/variants/eightanaloginputs;C:/Users/Janek/Documents/Arduino/libraries/rc-switch;</VMSETTING_IncludePaths>
+    <VMSETTING_IncludePaths>../../../IntelligentGardenWateringSystem;C:/Program Files (x86)/Arduino/libraries;C:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries;C:/Users/Janek/Documents/Arduino/libraries;C:/Program Files (x86)/Arduino/hardware/arduino/avr/cores/arduino;C:/Program Files (x86)/Arduino/hardware/arduino/avr/variants/mega;C:/Program Files (x86)/Arduino/hardware/tools/avr/avr/include/;C:/Program Files (x86)/Arduino/hardware/tools/avr/avr/include/avr/;C:/Program Files (x86)/Arduino/hardware/tools/avr/lib/gcc/avr/4.8.1/include;C:/Program Files (x86)/Arduino/hardware/tools/avr/lib/gcc/avr/4.9.2/include;C:/Program Files (x86)/Arduino/hardware/tools/avr/lib/gcc/avr/4.9.3/include;C:/Users/Janek/Documents/Arduino/libraries/DHT-sensor-library;C:/Users/Janek/Documents/Arduino/libraries/LiquidCrystal_I2C;C:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries/Wire/src;C:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries/Wire/src/utility;C:/Users/Janek/Documents/Arduino/libraries/Adafruit_Sensor;C:/Program Files (x86)/Arduino/hardware/arduino/avr/variants/eightanaloginputs;C:/Users/Janek/Documents/Arduino/libraries/rc-switch;C:/Users/Janek/Documents/Arduino/libraries/Time;C:/Users/Janek/Documents/Arduino/libraries/DS1307RTC;</VMSETTING_IncludePaths>
     <VisualMicroSettings>
       <VisualMicroSettings>
         <arduino.upload.port>COM5</arduino.upload.port>
@@ -449,6 +453,8 @@ build.arch=AVR
       <Value>C:/Users/Janek/Documents/Arduino/libraries/DHT-sensor-library</Value>
       <Value>C:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries/Wire/src</Value>
       <Value>C:/Users/Janek/Documents/Arduino/libraries/rc-switch</Value>
+      <Value>C:/Users/Janek/Documents/Arduino/libraries/Time</Value>
+      <Value>C:/Users/Janek/Documents/Arduino/libraries/DS1307RTC</Value>
       <Value>C:/Users/Janek/Documents/Arduino/libraries/Adafruit_Sensor</Value>
       <Value>C:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries/Wire/src/utility</Value>
       <Value>C:/Program Files (x86)/Arduino/libraries</Value>
@@ -489,6 +495,8 @@ build.arch=AVR
       <Value>C:/Users/Janek/Documents/Arduino/libraries/DHT-sensor-library</Value>
       <Value>C:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries/Wire/src</Value>
       <Value>C:/Users/Janek/Documents/Arduino/libraries/rc-switch</Value>
+      <Value>C:/Users/Janek/Documents/Arduino/libraries/Time</Value>
+      <Value>C:/Users/Janek/Documents/Arduino/libraries/DS1307RTC</Value>
       <Value>C:/Users/Janek/Documents/Arduino/libraries/Adafruit_Sensor</Value>
       <Value>C:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries/Wire/src/utility</Value>
       <Value>C:/Program Files (x86)/Arduino/libraries</Value>
@@ -511,7 +519,7 @@ build.arch=AVR
   <avrgcccpp.assembler.debugging.DebugLevel>Default (-Wa,-g)</avrgcccpp.assembler.debugging.DebugLevel>
 </AvrGccCpp>
     </ToolchainSettings>
-    <VMSETTING_IncludePaths>../../../IntelligentGardenWateringSystem;C:/Program Files (x86)/Arduino/libraries;C:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries;C:/Users/Janek/Documents/Arduino/libraries;C:/Program Files (x86)/Arduino/hardware/arduino/avr/cores/arduino;C:/Program Files (x86)/Arduino/hardware/arduino/avr/variants/mega;C:/Program Files (x86)/Arduino/hardware/tools/avr/avr/include/;C:/Program Files (x86)/Arduino/hardware/tools/avr/avr/include/avr/;C:/Program Files (x86)/Arduino/hardware/tools/avr/lib/gcc/avr/4.8.1/include;C:/Program Files (x86)/Arduino/hardware/tools/avr/lib/gcc/avr/4.9.2/include;C:/Program Files (x86)/Arduino/hardware/tools/avr/lib/gcc/avr/4.9.3/include;C:/Users/Janek/Documents/Arduino/libraries/DHT-sensor-library;C:/Users/Janek/Documents/Arduino/libraries/LiquidCrystal_I2C;C:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries/Wire/src;C:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries/Wire/src/utility;C:/Users/Janek/Documents/Arduino/libraries/Adafruit_Sensor;C:/Program Files (x86)/Arduino/hardware/arduino/avr/variants/eightanaloginputs;C:/Users/Janek/Documents/Arduino/libraries/rc-switch;</VMSETTING_IncludePaths>
+    <VMSETTING_IncludePaths>../../../IntelligentGardenWateringSystem;C:/Program Files (x86)/Arduino/libraries;C:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries;C:/Users/Janek/Documents/Arduino/libraries;C:/Program Files (x86)/Arduino/hardware/arduino/avr/cores/arduino;C:/Program Files (x86)/Arduino/hardware/arduino/avr/variants/mega;C:/Program Files (x86)/Arduino/hardware/tools/avr/avr/include/;C:/Program Files (x86)/Arduino/hardware/tools/avr/avr/include/avr/;C:/Program Files (x86)/Arduino/hardware/tools/avr/lib/gcc/avr/4.8.1/include;C:/Program Files (x86)/Arduino/hardware/tools/avr/lib/gcc/avr/4.9.2/include;C:/Program Files (x86)/Arduino/hardware/tools/avr/lib/gcc/avr/4.9.3/include;C:/Users/Janek/Documents/Arduino/libraries/DHT-sensor-library;C:/Users/Janek/Documents/Arduino/libraries/LiquidCrystal_I2C;C:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries/Wire/src;C:/Program Files (x86)/Arduino/hardware/arduino/avr/libraries/Wire/src/utility;C:/Users/Janek/Documents/Arduino/libraries/Adafruit_Sensor;C:/Program Files (x86)/Arduino/hardware/arduino/avr/variants/eightanaloginputs;C:/Users/Janek/Documents/Arduino/libraries/rc-switch;C:/Users/Janek/Documents/Arduino/libraries/Time;C:/Users/Janek/Documents/Arduino/libraries/DS1307RTC;</VMSETTING_IncludePaths>
     <VisualMicroSettings>
       <VisualMicroSettings>
         <arduino.upload.port>COM5</arduino.upload.port>

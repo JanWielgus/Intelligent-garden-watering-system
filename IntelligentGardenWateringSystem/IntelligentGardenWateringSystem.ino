@@ -43,6 +43,7 @@ uint16_t tYear;
 int menuPage = 0; // obecna strona w menu. Opisane na dole pliku
 bool wereAChangeFlag = true; // Jesli byla zmiana ktora musi zaistniec w menu to true (trzba ponownie zaladowac menu)
 uint8_t workingMode = 0; // 0 - auto, 1 - zawsze podlewa o godzinie, 2 - nigdy nie podlewa
+bool isTimeColon = true; // Czy na stronie stan ma byc wyswietlany dwukropek pomiedzy godz i min
 
 
 void setup()
@@ -180,15 +181,60 @@ void runMenu()
 		
 		switch (menuPage)
 		{
-			case 0:
+			case 0: // satn czuwania
 				chOnPage1 = 1; // Reset pozycji w menu
-				dispRow0 += "A-";
-				//workingMode==modeAuto?dispRow0+=sbAuto.toUpperCase():dispRow0+=sbAuto;
+				workingMode==modeAuto?sbAuto.toUpperCase():sbAuto.toLowerCase();
+				workingMode==modeAlwOn?sbOn.toUpperCase():sbOn.toLowerCase();
+				workingMode==modeAlwOff?sbOff.toUpperCase():sbOff.toLowerCase();
+				// Tworzenie linii do wyswietlenia
+				dispRow0 += "A-"+sbAuto+" B-"+sbOn;
+				dispRow1 += "C-"+sbOff+" D-"+sbMenu;
 				break;
 				
 			case 1:
 				chOnPage3 = 1; // Reset pozycji w ustawieniach
-				// dalej...
+				chOnPage1==1?menStan.toUpperCase():menStan.toLowerCase();
+				chOnPage1==2?menUstaw.toUpperCase():menUstaw.toLowerCase();
+				chOnPage1==3?menTryby.toUpperCase():menTryby.toLowerCase();
+				chOnPage1==4?menInfo.toUpperCase():menInfo.toLowerCase();
+				// Tworzenie linii do wyswietlenia
+				dispRow0 += menStan+Space+menUstaw+Space+menTryby;
+				dispRow1 += menInfo;
+				break;
+				
+			case 2:
+				if (tHour<10) dispRow0+="0";
+				dispRow0+=tHour;
+				isTimeColon==true?dispRow0+=":":dispRow0+=Space;
+				if (tMin<10) dispRow0+="0";
+				dispRow0+=tMin;
+				dispRow0+=Space;
+				dispRow0+=tDay;
+				dispRow0+=".";
+				dispRow0+=tMon;
+				dispRow0+=".";
+				dispRow0+=tYear;
+				//endl
+				dispRow1 += "T:"+String(temperature)+"H:"+String(humidity)+"R:"+String(rainRaw);
+				break;
+				
+			case 3:
+				//
+				//
+				//
+				// DO PRZEMYSLEWNIA !!!!!
+				//
+				//
+				break;
+				
+			case 4:
+				dispRow0 += "NIC TU NIE MA";
+				dispRow1 += "klik aby wyjsc";
+				break;
+			
+			case 5:
+				dispRow0 += "A-ENTER B-CANCEL";
+				dispRow1 += "C-LEWO  D-PRAWO";
 				break;
 		}
 		
@@ -242,7 +288,7 @@ uint32_t getPressedBtn()
 void runTimeModule()
 {
 	static uint32_t lastTimeUpdate=0;
-	if ((millis()-lastTimeUpdate) > 1000)
+	if ((millis()-lastTimeUpdate) >= 1000)
 	{
 		lastTimeUpdate = millis();
 		tSec = second();
@@ -252,7 +298,10 @@ void runTimeModule()
 		tMon = month();
 		tYear = year();
 		if (menuPage = 2) // Jesli to byla strona stan (gdzie trzba odswierzyc date na ekranie) to zadaj zaktualizowania ekranu
+		{
 			wereAChangeFlag = true;
+			isTimeColon = !isTimeColon;
+		}
 	}
 }
 

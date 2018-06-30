@@ -32,16 +32,15 @@ const String tempText = "Temp: ";
 const String humidText = "Humid: ";
 const String Space = " ";
 // standby labels (sb - stand by)
-const String sbAuto = "auto";
-
-const String sbPodlew = "podlew";
-const String sbOff = "off";
+String sbAuto = "auto";
+String sbOn = "on";
+String sbOff = "off";
 const String sbMenu = "menu";
 // labels in menu
-const String menStan = "stan";
-const String menUstaw = "ustaw";
-const String menTryby = "tryby";
-const String menInfo = "info";
+String menStan = "stan";
+String menUstaw = "ustaw";
+String menTryby = "tryby";
+String menInfo = "info";
 // labels on each page
 #define NO_SETTINGS_PAGES 3 // Ilosc stron z ustawieniami
 const String pagUstLab[NO_SETTINGS_PAGES] = {"Ust auto podlew", "Godzina podlew", "Czas podlewania"};
