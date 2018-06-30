@@ -20,7 +20,6 @@ RCSwitch remote = RCSwitch();
 // Functions prototypes
 void runMenu(); // Funkcja obslugujaca menu glowne
 void readDht();
-void printText(const char* text);
 void receiveData();
 uint32_t getPressedBtn(); // Pobranie informacji ktory przycisk byl klikniety, 0 - nie zostal zaden badz juz odczytano
 void runTimeModule(); // Uzywane w loop. Pobiera czas z modulu i zapisuje do zmiennych
@@ -42,7 +41,7 @@ uint16_t tYear;
 // Global variables
 int menuPage = 0; // obecna strona w menu. Opisane na dole pliku
 bool wereAChangeFlag = true; // Jesli byla zmiana ktora musi zaistniec w menu to true (trzba ponownie zaladowac menu)
-uint8_t workingMode = 0; // 0 - auto, 1 - zawsze podlewa o godzinie, 2 - nigdy nie podlewa
+uint8_t workingMode = modeAlwOff; // 0 - auto, 1 - zawsze podlewa o godzinie, 2 - nigdy nie podlewa
 bool isTimeColon = true; // Czy na stronie stan ma byc wyswietlany dwukropek pomiedzy godz i min
 
 
@@ -55,8 +54,18 @@ void setup()
 	setSyncProvider(RTC.get); // Do obslugi zegara
 	
 	lcd.backlight();
-	printText(String("Hello"));
-	delay(500);
+	lcd.setCursor(0,0);
+	lcd.print("IGWS is starting");
+	lcd.setCursor(0,1);
+	lcd.print("Please wait");
+	delay(700);
+	lcd.print(".");
+	delay(700);
+	lcd.print(".");
+	delay(700);
+	lcd.print(".");
+	delay(600);
+	lcd.home();
 }
 
 void loop()
@@ -67,14 +76,6 @@ void loop()
 	runMenu(); // Wyswietl menu
 	
 	readDht();
-	//lcd.clear();
-	lcd.setCursor(0,0);
-	printText(tempText);
-	printText(String(temperature));
-	lcd.setCursor(0,1);
-	printText(humidText);
-	printText(String(humidity));
-	delay(1000);
 }
 
 
@@ -187,8 +188,8 @@ void runMenu()
 				workingMode==modeAlwOn?sbOn.toUpperCase():sbOn.toLowerCase();
 				workingMode==modeAlwOff?sbOff.toUpperCase():sbOff.toLowerCase();
 				// Tworzenie linii do wyswietlenia
-				dispRow0 += "A-"+sbAuto+" B-"+sbOn;
-				dispRow1 += "C-"+sbOff+" D-"+sbMenu;
+				dispRow0 += "A-"+sbAuto+"  B-"+sbOn;
+				dispRow1 += "C-"+sbOff+"   D-"+sbMenu;
 				break;
 				
 			case 1:
@@ -215,7 +216,7 @@ void runMenu()
 				dispRow0+=".";
 				dispRow0+=tYear;
 				//endl
-				dispRow1 += "T:"+String(temperature)+"H:"+String(humidity)+"R:"+String(rainRaw);
+				dispRow1 += "T:"+String(uint8_t(temperature))+" H:"+String(uint8_t(humidity))+" R:"+String(rainRaw);
 				break;
 				
 			case 3:
@@ -238,7 +239,16 @@ void runMenu()
 				break;
 		}
 		
+		// Zeby zawsze bylo 16 znakow (nie pozostalo nic starego)
+		while (dispRow0.length() < 16)
+			dispRow0 += " ";
+		while (dispRow1.length() < 16)
+			dispRow1 += " ";
 		
+		lcd.setCursor(0,0);
+		lcd.print(dispRow0);
+		lcd.setCursor(0,1);
+		lcd.print(dispRow1);
 		wereAChangeFlag = false; // resetuj flage zadania aktualizacji wyswietlacza
 	}
 }
@@ -248,12 +258,6 @@ void readDht()
 	temperature = dht.readTemperature();
 	humidity = dht.readHumidity();
 	/* Sprawdzanie poprawnoœci: isnan(t) albo isnan(h): true-error */
-}
-
-void printText(String text)
-{
-	for (int i=0; i < text.length(); i++)
-		lcd.print(text[i]);
 }
 
 void receiveData()
@@ -297,7 +301,7 @@ void runTimeModule()
 		tDay = day();
 		tMon = month();
 		tYear = year();
-		if (menuPage = 2) // Jesli to byla strona stan (gdzie trzba odswierzyc date na ekranie) to zadaj zaktualizowania ekranu
+		if (menuPage == 2) // Jesli to byla strona stan (gdzie trzba odswierzyc date na ekranie) to zadaj zaktualizowania ekranu
 		{
 			wereAChangeFlag = true;
 			isTimeColon = !isTimeColon;
