@@ -20,7 +20,6 @@
 #define ARDUINO_ARCH_AVR
 //
 //
-void printText(String text);
 
 #include "pins_arduino.h" 
 #include "Arduino.h"
