@@ -83,7 +83,7 @@ void runMenu()
 {
 	static String dispRow0; // Wiersz 0 do wyswietlenia
 	static String dispRow1; // Wiersz 1 do wyswietlenia
-	static uint32_t rBtn; // Wcisniety klawisz
+	static uint32_t rBtn; // ID wcisnietego klawisza badz 0 jesli brak
 	static int8_t chOnPage1 = 1; // Wybrana opcja na stronie 1
 	static const uint8_t AmOnPage1 = 4; // Ilosc na stronie 1
 	static int8_t chOnPage3 = 1; // Wybrana opcja w ustawieniach
